@@ -1,0 +1,9 @@
+@CalculoServiceAPI_HostAddress = http://localhost:5007
+
+GET {{CalculoServiceAPI_HostAddress}}/calculajuros/
+Accept: application/json
+
+###
+
+GET {{CalculoServiceAPI_HostAddress}}/showmethecode/
+Accept: application/json

@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  taxa:
+    container_name: dockertaxa
+    build:
+      context: .
+      dockerfile: src/services/Taxa/TaxaServiceAPI/Dockerfile
+    ports:
+      - 32000:80
+      - 32001:443
+
+  calculo:
+    container_name: dockercalculo
+    build:
+      context: .
+      dockerfile: src/services/Calculo/CalculoServiceAPI/Dockerfile
+    depends_on:
+      - taxa
+    ports:
+      - 33000:80
+      - 33001:443

@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34616.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3B8A6152-4011-4EB2-B4F4-67804572C6D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gateways", "gateways", "{D25A215B-A567-4E7A-8608-66CF957E4F28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{C7A13C3E-D5A6-490A-B0B8-CA5809C24178}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Calculo", "Calculo", "{1BD8F4B6-EB45-473E-8F48-909DDB19FC9D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Taxa", "Taxa", "{5507D0AD-6F5F-4083-A218-03BA74526B60}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxaServiceAPI", "src\services\Taxa\TaxaServiceAPI\TaxaServiceAPI.csproj", "{D0CEAF92-CD52-4187-9A84-717E6AD6E589}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculoServiceAPI", "src\services\Calculo\CalculoServiceAPI\CalculoServiceAPI.csproj", "{1F72B17E-651F-4150-8152-39ED395BC307}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D0CEAF92-CD52-4187-9A84-717E6AD6E589} = {D0CEAF92-CD52-4187-9A84-717E6AD6E589}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculoDomain", "src\services\Calculo\CalculoDomain\CalculoDomain.csproj", "{E50F5F8B-D052-4D4B-AA9F-9E4CCA89FEB2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{B4C50713-4E72-4883-8C25-8EDA11519BC4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculoService.UnitTests", "test\CalculoService.UnitTests\CalculoService.UnitTests.csproj", "{F0B062DB-AAD7-4247-AB4C-DB8B0396A337}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D0CEAF92-CD52-4187-9A84-717E6AD6E589} = {D0CEAF92-CD52-4187-9A84-717E6AD6E589}
+		{E50F5F8B-D052-4D4B-AA9F-9E4CCA89FEB2} = {E50F5F8B-D052-4D4B-AA9F-9E4CCA89FEB2}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "global", "global", "{5D2540D3-E7E0-48B0-A9D6-7D9AB55A3640}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0CEAF92-CD52-4187-9A84-717E6AD6E589}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0CEAF92-CD52-4187-9A84-717E6AD6E589}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0CEAF92-CD52-4187-9A84-717E6AD6E589}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0CEAF92-CD52-4187-9A84-717E6AD6E589}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F72B17E-651F-4150-8152-39ED395BC307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F72B17E-651F-4150-8152-39ED395BC307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F72B17E-651F-4150-8152-39ED395BC307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F72B17E-651F-4150-8152-39ED395BC307}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E50F5F8B-D052-4D4B-AA9F-9E4CCA89FEB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E50F5F8B-D052-4D4B-AA9F-9E4CCA89FEB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E50F5F8B-D052-4D4B-AA9F-9E4CCA89FEB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E50F5F8B-D052-4D4B-AA9F-9E4CCA89FEB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0B062DB-AAD7-4247-AB4C-DB8B0396A337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0B062DB-AAD7-4247-AB4C-DB8B0396A337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0B062DB-AAD7-4247-AB4C-DB8B0396A337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0B062DB-AAD7-4247-AB4C-DB8B0396A337}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D25A215B-A567-4E7A-8608-66CF957E4F28} = {3B8A6152-4011-4EB2-B4F4-67804572C6D3}
+		{C7A13C3E-D5A6-490A-B0B8-CA5809C24178} = {3B8A6152-4011-4EB2-B4F4-67804572C6D3}
+		{1BD8F4B6-EB45-473E-8F48-909DDB19FC9D} = {C7A13C3E-D5A6-490A-B0B8-CA5809C24178}
+		{5507D0AD-6F5F-4083-A218-03BA74526B60} = {C7A13C3E-D5A6-490A-B0B8-CA5809C24178}
+		{D0CEAF92-CD52-4187-9A84-717E6AD6E589} = {5507D0AD-6F5F-4083-A218-03BA74526B60}
+		{1F72B17E-651F-4150-8152-39ED395BC307} = {1BD8F4B6-EB45-473E-8F48-909DDB19FC9D}
+		{E50F5F8B-D052-4D4B-AA9F-9E4CCA89FEB2} = {1BD8F4B6-EB45-473E-8F48-909DDB19FC9D}
+		{F0B062DB-AAD7-4247-AB4C-DB8B0396A337} = {B4C50713-4E72-4883-8C25-8EDA11519BC4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C2D0A96-2C17-4329-B728-AC942943C9A5}
+	EndGlobalSection
+EndGlobal

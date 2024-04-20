@@ -1,0 +1,6 @@
+@TaxasServiceAPI_HostAddress = http://localhost:5039
+
+GET {{TaxasServiceAPI_HostAddress}}/taxa/
+Accept: application/json
+
+###
